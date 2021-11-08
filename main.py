@@ -111,6 +111,8 @@ for id in user_data['program_data']:
 user_profile.reset_index(drop=True)
 for i in range(len(user_profile)):
     parsed_user_data[user_profile['id'][i]]['profile'] = {'sex': user_profile['sex'][i], 'age': int(user_profile['age'][i])}
+# 
+
 
 json_str = 'json_user_data=' + "'" + json.dumps(parsed_user_data) + "'"
 
