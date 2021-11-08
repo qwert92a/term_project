@@ -118,5 +118,240 @@ with open("./life_log_report/data/json/program_data/program_data.json", "w") as 
   json_file.write(json_str)
 
 
+#-----------------------------------------------------------------------------------
+
+data_path = os.getcwd()+'/' + 'life_log_report/data/life_log_data2/hs_g73_m08'
+os.chdir(data_path)
+files = os.listdir(data_path)
+
+def GetDataById (id):
+    if (int(id) > 30063): fileName = ("hs_" + str(id) + "_m08_0903_1356.csv")
+    else: fileName = ("hs_" + str(id) + "_m08_0903_1355.csv")
+    data = pd.read_csv(fileName, encoding='cp949')
+    
+    return data
+
+def GetDays (data): #사용날짜(일수) 불러오기
+    Time = data["Time"].str.split(expand = True)
+    Time.columns = ["날짜", "시간"]
+    Date = Time.drop(["시간"], axis=1)
+    Date = Date.drop_duplicates()
+    return len(Date.index)
+
+def GetDailyData (column_name, data): # 활동(State)의 일일 평균 횟수
+    sel_col = data[column_name]
+    sel_col = pd.value_counts(sel_col.values)
+    sel_col = sel_col.reset_index()
+    sel_col.columns = ["활동", "일일 평균 횟수"]
+    sel_col["일일 평균 횟수"] = sel_col["일일 평균 횟수"].div(GetDays(data)).round(2)
+    return sel_col
+
+def MergeByAdd (table1, table2, columnName, mergedName):
+    total = pd.merge(table1, table2, how='outer', on=columnName)
+    total = total.fillna(0)
+    sum_column = total.iloc[:,1]+total.iloc[:,2]
+    total[mergedName] = sum_column
+    colname1 = total.columns[1]
+    colname2 = total.columns[2]
+    total = total.drop([colname1, colname2], axis=1)
+    
+    return total
+
+def DailyRoutine(data):
+    Time = data["Time"].str.split(expand=True)
+    Date = Time[0]
+    TimeStamp = Time[1].str.slice(stop=2)
+    
+    DayTime = []
+    for i in range (24):
+        TimeStr = str(i)
+        if (i<10): TimeStr = "0" + TimeStr
+        DayTime.append(TimeStr)
+        
+    Graph = pd.Series(DayTime)
+    
+    TimeCount = pd.value_counts(TimeStamp.values)
+    TimeCount = TimeCount.sort_index()
+    
+    for i in range (24):
+        TimeStr = str(i)
+        if (i < 10): TimeStr = "0" + TimeStr
+            
+        if (TimeStr not in TimeCount.index):
+            Graph[i] = 0
+        else:
+            Graph[i] = TimeCount[TimeStr]
+        i+=1
+    
+    Graph = Graph.reset_index()
+    Graph.columns = ["시간", "활동량"]
+    
+    return Graph
+
+first = True
+count = 0
+
+#전체 사용자 ---------------------------------------------------------------
+json_path = "../../json/program_data2/total_act.json"
+json_data = {}
+json_data['활동'] = []
+json_data['일일 평균 횟수'] = []
+
+for file in files:
+    data = pd.read_csv(file, encoding='cp949')
+    
+    if (data.empty != True):
+
+        newState = GetDailyData("State", data)
+
+        if (first):
+            oldState = newState
+            first = False
+        else:
+            oldState = MergeByAdd(oldState, newState, '활동', '일일 평균 횟수')
+            
+            
+oldState['일일 평균 횟수'] = oldState['일일 평균 횟수'].div(len(files)).round(2)
+final = oldState
+final = final.sort_values(by=['일일 평균 횟수'], ascending=False, ignore_index = True)
+final = final.truncate(before=0, after=4)
+
+json_data['활동'] = list(final['활동'])
+json_data['일일 평균 횟수'] = list(final['일일 평균 횟수'])
+
+json_str = 'total_act=' + json.dumps(json_data, ensure_ascii=False) 
+
+with open(json_path, 'w') as outfile:
+    outfile.write(json_str)
+
+
+# 생활패턴------------------------------------------------------------------
+data = {}
+
+for file in files:
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data2/lifecycle.json"
+    data[user_id] = {}
+
+    if (not user_data.empty):
+        DR_data = DailyRoutine(user_data)
+        act_rate = list([int(x) for x in DR_data['활동량']])
+        data[user_id] = {
+            "act_rate": act_rate
+        }
+
+json_str = 'lifecycle=' + json.dumps(data, indent=4,ensure_ascii=False) 
+
+with open(json_path, 'w') as outfile:
+    outfile.write(json_str)
+
+
+
+
+#TV--------------------------------------------------------------------
+data = {}
+
+for file in files:
+
+    #TV
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data2/TV.json"
+    data[user_id] = {}
+
+    if (not user_data.empty):
+        Z_data = GetDailyData("Z", user_data)
+        
+        Watch_data = user_data['Z'] == '리모콘'
+        TV_log= user_data[Watch_data]
+        Daily_TV_count = round(len(TV_log) / GetDays(user_data))
+        if (Daily_TV_count > 1):  
+
+            Time = TV_log["Time"].str.split(expand=True)
+            TimeStamp = Time[1].str.slice(stop=2)
+            TimeCount = pd.value_counts(TimeStamp.values)
+            
+            TimeCount = TimeCount.sort_values(ascending=False)
+            TimeCount = TimeCount.reset_index()
+            MostWatchAt = TimeCount['index'][0]
+
+            data[user_id]= {
+            "DailyCount": Daily_TV_count,
+            "MostWatchAt": MostWatchAt
+            }
+            
+json_str = 'tv=' + json.dumps(data, indent=4,ensure_ascii=False) 
+
+with open(json_path, 'w') as outfile:
+    outfile.write(json_str)
+
+
+#개인활동------------------------------------------------------------
+data = {}
+
+for file in files:
+
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data2/user_act.json"
+    data[user_id] = {}
+
+    if (not user_data.empty): 
+        top_acts = GetDailyData("State", user_data).truncate(before=0, after =3)
+        leftover = sum(GetDailyData("State", user_data).truncate(before=4)['일일 평균 횟수'].array)
+        labels = list(top_acts['활동'].values)
+        counts = list(top_acts['일일 평균 횟수'].values)
+
+        if (leftover != 0):
+            labels.append('기타')
+            counts.append(leftover.round(1))
+
+        ratio = list((counts / sum(counts) * 100).round(1))
+
+        data[user_id]= {
+        "labels": labels,
+        "ratios": ratio
+        }
+
+json_str = 'user_act=' + json.dumps(data, ensure_ascii=False) 
+
+with open(json_path, 'w') as outfile:
+    outfile.write(json_str)
+    
+
+
+#간식------------------------------------------------------------
+data = {}
+
+for file in files:
+
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data2/snack.json"
+    data[user_id] = {}
+
+    if (not user_data.empty):
+        Act_data = GetDailyData("Act", user_data)
+        
+        Eat_data = user_data['Act'] == '간식'
+        Snack_log= user_data[Eat_data]
+        Daily_Snack_count = round(len(Snack_log) / GetDays(user_data))
+        data[user_id]= {"DailyCount": Daily_Snack_count}
+            
+json_str = 'snack=' + json.dumps(data, indent=4,ensure_ascii=False) 
+
+with open(json_path, 'w') as outfile:
+    outfile.write(json_str)
+
+os.chdir('../../../../')
+print(os.getcwd())
+
+#---------------------------------------------------------------
+
 filename = 'file:///'+os.getcwd()+'/' + 'life_log_report/index.html'
 webbrowser.open_new_tab(filename)
