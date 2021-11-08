@@ -423,8 +423,61 @@
                     <code>/js/demo/chart-bar-demo.js</code> file. -->
                   </div>
                 </div>
+
+                <!-- Area Chart2 -->
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div
+                    class="
+                      card-header
+                      py-3
+                      d-flex
+                      flex-row
+                      align-items-center
+                      justify-content-between
+                    "
+                  >
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      생활 패턴
+                    </h6>
+                    <div class="dropdown no-arrow">
+                      <a
+                        class="dropdown-toggle"
+                        href="#"
+                        role="button"
+                        id="dropdownMenuLink"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
+                        ></i>
+                      </a>
+                      <div
+                        class="
+                          dropdown-menu dropdown-menu-right
+                          shadow
+                          animated--fade-in
+                        "
+                        aria-labelledby="dropdownMenuLink"
+                      >
+                        <div class="dropdown-header">범주 선택:</div>
+                        <a class="dropdown-item" href="#">외출 횟수</a>
+                        <a class="dropdown-item" href="#">약 복용 횟수</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart2"></canvas>
+                    </div>
+                  </div>
+                </div>
               </div>
 
+              
               <!-- Pie Chart -->
               <div class="col-xl-4 col-lg-7">
                 <div class="card shadow mb-4">
@@ -475,16 +528,7 @@
                     <div class="chart-pie pt-4 pb-2">
                       <canvas id="myPieChart"></canvas>
                     </div>
-                    <div class="mt-4 text-center small">
-                      <span class="mr-2">
-                        <i class="fas fa-circle text-primary"></i> 수면
-                      </span>
-                      <span class="mr-2">
-                        <i class="fas fa-circle text-success"></i> 프로그램 참여
-                      </span>
-                      <span class="mr-2">
-                        <i class="fas fa-circle text-info"></i> 운동
-                      </span>
+                    <div class="mt-4 text-center small" id="pieChartLabels">
                     </div>
                   </div>
                 </div>
@@ -554,7 +598,26 @@
                   </div>
                 </div>
               </div>
+
+                <!-- Bar Chart 2 -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">전체 사용자 활동</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart-bar">
+                      <canvas id="myBarChart2"></canvas>
+                    </div>
+                    <!-- <hr />
+                    Styling for the bar chart can be found in the
+                    <code>/js/demo/chart-bar-demo.js</code> file. -->
+                  </div>
+                </div>
+
+
             </div>
+
+
 
             <!-- Content Row -->
             <div class="row">
@@ -636,17 +699,17 @@
 
                 <!-- Color System -->
                 <div class="row">
-                  <div class="col-lg-6 mb-4">
+                  <div class="col-lg-6 mb-4" id="TV_box">
                     <div class="card bg-primary text-white shadow">
-                      <div class="card-body">
+                      <div class="card-body" id="TV">
                         Primary
                         <div class="text-white-50 small">#4e73df</div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 mb-4">
+                  <div class="col-lg-6 mb-4" id="snack_box">
                     <div class="card bg-success text-white shadow">
-                      <div class="card-body">
+                      <div class="card-body" id="snack">
                         Success
                         <div class="text-white-50 small">#1cc88a</div>
                       </div>
@@ -837,8 +900,10 @@
       type="text/javascript"
     ></script>
     <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/chart-area-demo2.js" defer></script>
+    <script src="js/demo/chart-pie-demo.js" defer></script>
     <script src="js/demo/chart-bar-demo.js"></script>
+    <script src="js/demo/chart-bar-demo2.js" defer></script>
     <script src="js/demo/chart-radar-demo.js"></script>
 
     <script>
@@ -887,5 +952,14 @@
       change_participation_rate(location.hash.split('#')[1]);
       change_last_message(location.hash.split('#')[1]);
     </script>
+
+    <!-- json files -->
+    <script type="text/javascript" src="data/json/program_data2/lifecycle.json"></script>
+    <script type="text/javascript" src="data/json/program_data2/snack.json"></script>  
+    <script type="text/javascript" src="data/json/program_data2/total_act.json"></script>    
+    <script type="text/javascript" src="data/json/program_data2/TV.json"></script>  
+    <script type="text/javascript" src="data/json/program_data2/user_act.json"></script>
+
+
   </body>
 </html>
