@@ -279,6 +279,8 @@ for file in files:
             TimeCount = TimeCount.sort_values(ascending=False)
             TimeCount = TimeCount.reset_index()
             MostWatchAt = TimeCount['index'][0]
+            if (len(MostWatchAt) == 2 and MostWatchAt[0] == "0"):
+                MostWatchAt = MostWatchAt[1]
 
             data[user_id]= {
             "DailyCount": Daily_TV_count,
