@@ -66,16 +66,16 @@ Chart.defaults.global.defaultFontColor = '#858796';
   snack_count = snackData[user_Id].DailyCount
 
   if (tv_count == 0 || JSON.stringify(tvData[user_Id]) === '{}' ) {
-    TV_box = document.getElementById('TV_box')
-    TV_box.remove();
+    document.getElementById('TV').innerHTML = 
+      'TV를 자주 보시는 분께는 시간대별 프로그램을 추천해드려요!'
   } else {
       document.getElementById('TV').innerHTML = 
       '일일 평균 TV 시청 횟수 <br /> ' + tv_count
   }
 
   if (snack_count == 0 || JSON.stringify(snackData[user_Id]) === '{}' ) {
-    snack_box = document.getElementById('snack_box')
-    snack_box.remove();
+    document.getElementById('snack').innerHTML = 
+      '간식 섭취는 안하고 계시네요!'
   } else {
       document.getElementById('snack').innerHTML = 
       '일일 평균 간식 섭취 횟수 <br /> ' + snack_count
