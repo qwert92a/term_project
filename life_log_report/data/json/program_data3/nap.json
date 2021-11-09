@@ -1,27 +1,27 @@
-snack={
+nap={
     "1001": {
         "DailyCount": 0
     },
     "1002": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "1003": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "1004": {
         "DailyCount": 1
     },
     "1008": {
-        "DailyCount": 3
+        "DailyCount": 0
     },
     "1009": {
         "DailyCount": 1
     },
     "1011": {
-        "DailyCount": 0
+        "DailyCount": 4
     },
     "1012": {
-        "DailyCount": 2
+        "DailyCount": 1
     },
     "1013": {
         "DailyCount": 0
@@ -30,56 +30,56 @@ snack={
         "DailyCount": 0
     },
     "1016": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1018": {
         "DailyCount": 0
     },
     "1019": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "1020": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1021": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1022": {
         "DailyCount": 0
     },
     "1026": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1027": {
         "DailyCount": 0
     },
     "1028": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1029": {
         "DailyCount": 0
     },
     "1030": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "1032": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1033": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1034": {},
     "1036": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "1037": {
-        "DailyCount": 0
+        "DailyCount": 3
     },
     "1039": {
-        "DailyCount": 0
+        "DailyCount": 8
     },
     "1040": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "1042": {
         "DailyCount": 0
@@ -88,96 +88,96 @@ snack={
         "DailyCount": 0
     },
     "1045": {
-        "DailyCount": 0
+        "DailyCount": 8
     },
     "1046": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "1047": {
-        "DailyCount": 0
+        "DailyCount": 2
     },
     "1048": {
         "DailyCount": 0
     },
     "1050": {
-        "DailyCount": 0
+        "DailyCount": 2
     },
     "1052": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1053": {
         "DailyCount": 0
     },
     "1054": {
-        "DailyCount": 1
-    },
-    "1055": {
-        "DailyCount": 1
-    },
-    "1056": {
         "DailyCount": 0
     },
+    "1055": {
+        "DailyCount": 0
+    },
+    "1056": {
+        "DailyCount": 4
+    },
     "1057": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1059": {
         "DailyCount": 0
     },
     "1061": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "1062": {
-        "DailyCount": 4
+        "DailyCount": 1
     },
     "228": {
         "DailyCount": 0
     },
     "230": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "232": {
-        "DailyCount": 5
+        "DailyCount": 0
     },
     "273": {
-        "DailyCount": 0
+        "DailyCount": 2
     },
     "276": {
-        "DailyCount": 1
-    },
-    "30016": {
-        "DailyCount": 1
-    },
-    "30035": {
         "DailyCount": 0
     },
-    "30038": {
+    "30016": {
+        "DailyCount": 0
+    },
+    "30035": {
         "DailyCount": 1
+    },
+    "30038": {
+        "DailyCount": 0
     },
     "30039": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "30040": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "30041": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "30043": {},
     "30044": {
-        "DailyCount": 1
+        "DailyCount": 4
     },
     "30045": {
-        "DailyCount": 3
+        "DailyCount": 0
     },
     "30046": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "30047": {},
     "30048": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "30049": {
-        "DailyCount": 0
+        "DailyCount": 8
     },
     "30050": {
         "DailyCount": 0
@@ -199,13 +199,13 @@ snack={
     "30061": {},
     "30062": {},
     "30063": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "30064": {
         "DailyCount": 0
     },
     "30066": {
-        "DailyCount": 4
+        "DailyCount": 0
     },
     "30067": {},
     "30069": {
@@ -215,25 +215,25 @@ snack={
         "DailyCount": 1
     },
     "30071": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "30072": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "30073": {
         "DailyCount": 0
     },
     "30074": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "30075": {
         "DailyCount": 0
     },
     "30076": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "30077": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "30078": {
         "DailyCount": 0
@@ -242,57 +242,57 @@ snack={
         "DailyCount": 0
     },
     "315": {
-        "DailyCount": 1
-    },
-    "339": {
         "DailyCount": 0
     },
-    "341": {
+    "339": {
         "DailyCount": 1
+    },
+    "341": {
+        "DailyCount": 0
     },
     "342": {},
     "476": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "477": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "479": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "486": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "488": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "490": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "492": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "494": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "495": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "496": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "504": {
-        "DailyCount": 0
+        "DailyCount": 4
     },
     "505": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "509": {},
     "511": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "512": {
-        "DailyCount": 4
+        "DailyCount": 0
     },
     "513": {
         "DailyCount": 0
@@ -301,23 +301,23 @@ snack={
         "DailyCount": 0
     },
     "519": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "520": {
-        "DailyCount": 2
+        "DailyCount": 1
     },
     "527": {
         "DailyCount": 0
     },
     "530": {},
     "532": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "534": {
-        "DailyCount": 3
+        "DailyCount": 0
     },
     "535": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "536": {
         "DailyCount": 0
@@ -326,27 +326,27 @@ snack={
     "538": {},
     "540": {},
     "542": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "544": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "546": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "547": {
         "DailyCount": 0
     },
     "552": {},
     "570": {
-        "DailyCount": 4
+        "DailyCount": 0
     },
     "574": {},
     "580": {
-        "DailyCount": 0
+        "DailyCount": 2
     },
     "581": {
-        "DailyCount": 3
+        "DailyCount": 0
     },
     "582": {
         "DailyCount": 0
@@ -355,7 +355,7 @@ snack={
         "DailyCount": 0
     },
     "585": {
-        "DailyCount": 4
+        "DailyCount": 0
     },
     "633": {},
     "635": {},
@@ -364,29 +364,29 @@ snack={
         "DailyCount": 0
     },
     "644": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "650": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "653": {},
     "654": {
-        "DailyCount": 1
-    },
-    "655": {
-        "DailyCount": 1
-    },
-    "656": {
         "DailyCount": 0
     },
+    "655": {
+        "DailyCount": 0
+    },
+    "656": {
+        "DailyCount": 1
+    },
     "658": {
-        "DailyCount": 7
+        "DailyCount": 3
     },
     "661": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "662": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "664": {},
     "665": {
@@ -394,7 +394,7 @@ snack={
     },
     "667": {},
     "668": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "672": {
         "DailyCount": 0
@@ -406,57 +406,57 @@ snack={
         "DailyCount": 0
     },
     "720": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "732": {},
     "760": {
         "DailyCount": 0
     },
     "768": {
-        "DailyCount": 2
+        "DailyCount": 1
     },
     "796": {
         "DailyCount": 0
     },
     "797": {
-        "DailyCount": 4
+        "DailyCount": 0
     },
     "799": {
-        "DailyCount": 2
+        "DailyCount": 1
     },
     "800": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "801": {
-        "DailyCount": 2
+        "DailyCount": 3
     },
     "802": {
-        "DailyCount": 1
+        "DailyCount": 0
     },
     "803": {
-        "DailyCount": 0
+        "DailyCount": 1
     },
     "804": {},
     "805": {
-        "DailyCount": 4
+        "DailyCount": 0
     },
     "806": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "807": {
-        "DailyCount": 7
+        "DailyCount": 0
     },
     "808": {},
     "809": {
-        "DailyCount": 2
+        "DailyCount": 0
     },
     "811": {
-        "DailyCount": 4
+        "DailyCount": 0
     },
     "812": {
         "DailyCount": 1
     },
     "813": {
-        "DailyCount": 3
+        "DailyCount": 0
     }
 }

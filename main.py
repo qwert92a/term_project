@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import numpy as np
 import json
+import random
 
 # read user profile data from excel file
 user_profile = pd.read_excel('./life_log_report/data/life_log_data/user_profile.xlsx')
@@ -106,6 +107,7 @@ parsed_user_data = {}
 for id in user_data['program_data']:
   parsed_user_data[id] = {}
   parsed_user_data[id]['program_data'] = user_data['program_data'][id]['count']
+  parsed_user_data[id]['program_data']['recommend'] = [ random.choice(category[min_category]) for min_category in parsed_user_data[id]['program_data']['min_category']]
   parsed_user_data[id]['dialog_data'] = {'last_message': user_data['dialog_data'][id]['last_message'], 'participation_rate': user_data['dialog_data'][id]['participation_rate'] }
 
 user_profile.reset_index(drop=True)
@@ -116,7 +118,7 @@ for i in range(len(user_profile)):
 
 json_str = 'json_user_data=' + "'" + json.dumps(parsed_user_data) + "'"
 
-with open("./life_log_report/data/json/program_data/program_data.json", "w") as json_file:
+with open("./life_log_report/data/json/program_data/program_data.json", "w", encoding='UTF-8') as json_file:
   json_file.write(json_str)
 
 
@@ -223,7 +225,7 @@ json_data['일일 평균 횟수'] = list(final['일일 평균 횟수'])
 
 json_str = 'total_act=' + json.dumps(json_data, ensure_ascii=False) 
 
-with open(json_path, 'w') as outfile:
+with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
 
 
@@ -246,7 +248,7 @@ for file in files:
 
 json_str = 'lifecycle=' + json.dumps(data, indent=4,ensure_ascii=False) 
 
-with open(json_path, 'w') as outfile:
+with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
 
 
@@ -287,7 +289,7 @@ for file in files:
             
 json_str = 'tv=' + json.dumps(data, indent=4,ensure_ascii=False) 
 
-with open(json_path, 'w') as outfile:
+with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
 
 
@@ -319,9 +321,9 @@ for file in files:
         "ratios": ratio
         }
 
-json_str = 'user_act=' + json.dumps(data, ensure_ascii=False) 
+json_str = 'user_act=' + json.dumps(data, ensure_ascii=False)
 
-with open(json_path, 'w') as outfile:
+with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
     
 
@@ -347,7 +349,102 @@ for file in files:
             
 json_str = 'snack=' + json.dumps(data, indent=4,ensure_ascii=False) 
 
-with open(json_path, 'w') as outfile:
+with open(json_path, 'w', encoding='UTF-8') as outfile:
+    outfile.write(json_str)
+
+#---------------------------------------------------------------
+
+
+#약 복용------------------------------------------------------------
+data = {}
+
+for file in files:
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+    
+    json_path = "../../json/program_data3/drug.json"
+    data[user_id] = {}
+    
+    if (not user_data.empty):
+        Act_data = GetDailyData("Act", user_data)
+        
+        Drug_data = user_data["Act"].str.contains('복약')
+        drug_log = user_data[Drug_data]
+        Daily_drug_count = round(len(drug_log) / GetDays(user_data))
+        data[user_id] = {"DailyCount" : Daily_drug_count}
+        
+json_str = 'drug=' + json.dumps(data, indent=4, ensure_ascii=False)
+
+with open(json_path, 'w', encoding='UTF-8') as outfile:
+    outfile.write(json_str)
+    
+#낮잠------------------------------------------------------------
+
+data = {}
+
+for file in files:
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+    
+    json_path = "../../json/program_data3/nap.json"
+    data[user_id] = {}
+    
+    if (not user_data.empty):
+        Act_data = GetDailyData("Act", user_data)
+        
+        Nap_data = user_data["Act"] == '낮잠'
+        nap_log = user_data[Nap_data]
+        Daily_nap_count = round(len(drug_log) / GetDays(user_data))
+        data[user_id] = {"DailyCount" : Daily_nap_count}
+        
+json_str = 'nap=' + json.dumps(data, indent=4, ensure_ascii=False)
+
+with open(json_path, 'w', encoding='UTF-8') as outfile:
+    outfile.write(json_str)
+
+# 외출, 운동------------------------------------------------------------
+
+data = {}
+labels = ['외출', '실내운동', '실외운동']
+
+for file in files:
+
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data3/active.json"
+    data[user_id] = {}
+    active = user_data[user_data['Act'].str.contains('운동|외출')]
+
+    if (not user_data.empty): 
+        counts = []
+        ratio = []
+        out = len(active[active['Act'].str.contains('외출')])
+        indoor = len(active[active['Act'].str.contains('실내운동')])
+        outdoor = len(active[active['Act'].str.contains('실외운동')])
+        
+        counts.append(out)
+        counts.append(indoor)
+        counts.append(outdoor)
+        
+        if sum(counts) == 0:
+            ratio.append(0)
+            ratio.append(0)
+            ratio.append(0)
+        else:
+            ratio.append(round((out / sum(counts) * 100), 1))
+            ratio.append(round((indoor / sum(counts) * 100), 1))
+            ratio.append(round((outdoor / sum(counts) * 100), 1))
+
+        data[user_id]= {
+        "labels": labels,
+        "counts": counts,
+        "ratios": ratio
+        }
+        
+json_str = 'activity=' + json.dumps(data, ensure_ascii=False) 
+
+with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
 
 os.chdir('../../../../')

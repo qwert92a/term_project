@@ -28,13 +28,12 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-
 let total_actData = JSON.parse(JSON.stringify(total_act));
-var top_acts = total_actData["활동"]
-var acts_counts = total_actData["일일 평균 횟수"]
+var top_acts = total_actData['활동'];
+var acts_counts = total_actData['일일 평균 횟수'];
 
 // Bar Chart Example
-var ctx = document.getElementById('myBarChart2');
+var ctx = document.getElementById('myBarChart');
 var labels_data = [];
 var count_data = [];
 for (var i = 0; i < 5; i++) {
