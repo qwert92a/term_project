@@ -3,7 +3,6 @@
   '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
 
-
 function number_format(number, decimals, dec_point, thousands_sep) {
   number = (number + '').replace(',', '').replace(' ', '');
   var n = !isFinite(+number) ? 0 : +number,
@@ -27,13 +26,12 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
-
 // Area Chart Example
 let lifecycleData = JSON.parse(JSON.stringify(lifecycle));
 let user_id = location.hash.split('#')[1];
-let act_rate_data = lifecycleData[user_id].act_rate
+let act_rate_data = lifecycleData[user_id].act_rate;
 
-var ctx = document.getElementById('myAreaChart2');
+var ctx = document.getElementById('myAreaChart');
 var time = [];
 var act_data = [];
 for (var i = 0; i < 24; i++) {
