@@ -352,6 +352,87 @@ json_str = 'snack=' + json.dumps(data, indent=4,ensure_ascii=False)
 with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
 
+
+#수면규칙성------------------------------------------------------------
+
+data = {}
+user_data = GetDataById(494)
+
+for file in files:
+
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data2/sleep_reg.json"
+    data[user_id] = {}
+
+    if (not user_data.empty):
+        user_data = user_data.iloc[:, [1,3]]
+        user_data["Time"] = user_data["Time"].str.split(expand=True)[1].str.slice(stop=2)
+        sleep = user_data.Act == "취침"
+        user_data = user_data.loc[sleep, ["Time", "Act"]]
+        user_data = user_data.drop(["Act"], axis=1)
+        user_data["Time"] = user_data["Time"].replace(["00", "01", "02", "03", "04", "05", "06", "07", "08"],
+                                            ["24", "25", "26", "27", "28", "29", "30", "31", "32"])
+        data2 = pd.value_counts(user_data["Time"])
+
+        if (not data2.empty):
+            user_data['Time'] = user_data['Time'].astype(int)
+            std_value = user_data.std()["Time"].round(1)
+            if (len(user_data["Time"]) == 1): std_value = 0
+            data[user_id] = {"std": std_value}
+
+json_str = 'sleep_reg=' + json.dumps(data, indent=4,ensure_ascii=False) 
+
+with open(json_path, 'w', encoding='UTF-8') as outfile:
+    outfile.write(json_str)
+
+
+#평균운동횟수------------------------------------------------------------
+
+
+data = {}
+
+for file in files:
+
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data2/ex_avg.json"
+    data[user_id] = {}
+
+    if (not user_data.empty): 
+
+        Ex_States = ['실내운동하기', '실외운동하기', '순이체조', '요가명상']
+                
+        Ex_filtered= user_data[user_data.State.isin(Ex_States)]
+        Ex_filtered = Ex_filtered.iloc[:, [1,4]]
+        Ex_filtered = Ex_filtered.sort_values(by=['Time'], ignore_index = True)
+        Ex_filtered.Time = Ex_filtered.Time.str[:15]
+        Ex_filtered = Ex_filtered.drop_duplicates()
+        
+
+        WeekN = GetDays(user_data) // 7
+        
+        if (WeekN < 1): data[user_id] = {"WeekN": WeekN }
+        else:
+            Daily_Ex_count = round(len(Ex_filtered) / GetDays(user_data), 1)
+            Weekly_Ex_count = round(Daily_Ex_count * 7, 1)
+            
+            if (len(Ex_filtered) == 0):
+                data[user_id] = {"WeekN": WeekN ,
+                                "Weekly_Ex_count": 0 }
+            
+            else:
+                data[user_id] = {"WeekN": WeekN ,
+                                "Weekly_Ex_count": Weekly_Ex_count }
+
+json_str = 'ex_avg=' + json.dumps(data, indent=4,ensure_ascii=False) 
+
+with open(json_path, 'w', encoding='UTF-8') as outfile:
+    outfile.write(json_str)
+
+
 #---------------------------------------------------------------
 
 

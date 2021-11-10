@@ -32,6 +32,16 @@ let user_id = location.hash.split('#')[1];
 let act_rate_data = lifecycleData[user_id].act_rate;
 
 var ctx = document.getElementById('myAreaChart');
+var ChartBox = document.getElementById('AreaChartBox');
+var lifecycle_tab = document.getElementById("lifecycle_tab");
+var textbox = document.createElement("div");
+var text = document.createElement("h6");
+var text2 = document.createElement("h6");
+
+let data_empty = JSON.stringify(lifecycleData[user_id]) === '{}'
+if (data_empty){
+  ChartBox.innerHTML = "데이터가 없어요"
+} else {
 var time = [];
 var act_data = [];
 for (var i = 0; i < 24; i++) {
@@ -134,3 +144,61 @@ var myLineChart = new Chart(ctx, {
     },
   },
 });
+
+
+let sort_act_data = act_data.slice();
+sort_act_data.sort(function(a,b) {return b-a;});
+sort_act_data = sort_act_data.slice(0,6);
+
+function range(start, end) {
+ 
+  var arr = [];
+
+  var length = end - start; 
+
+  for (var i = 0; i <= length; i++) { 
+
+      arr[i] = start;
+      start++;
+  }
+
+  return arr;
+}
+
+let act_time_arr = []
+
+for (i=0; i<6; i++){
+  act_time = act_data.indexOf(sort_act_data[i])
+  act_time_arr.push(act_time)
+}
+
+let reducer = (accumulator, curr) => accumulator + curr;
+let act_time_mean = act_time_arr.reduce(reducer) / 6;
+let daytime_dist = Math.abs(act_time_mean - 8)
+let nhttime_dist = Math.abs(act_time_mean - 18)
+
+if (daytime_dist == nhttime_dist) {
+  top_time = act_data.indexOf(sort_act_data[0])
+  daytime_dist = Math.abs(top_time - 6)
+  nhttime_dist = Math.abs(top_time - 18)
+}
+
+if (daytime_dist < nhttime_dist) {
+  text.innerHTML = "아침형"
+  text.classList.add('font-weight-bold', 'text-warning', 'mb-0')
+}
+else { 
+  text.innerHTML = "저녁형" 
+  text.classList.add('font-weight-bold', 'text-success', 'mb-0')
+}
+
+
+text2.innerHTML += " 생활 패턴을 가지고 계세요!"
+text2.classList.add('font-weight-bold', 'mb-0')
+text2.style.marginLeft = "0.5em"
+textbox.style.display = "flex"
+textbox.style.marginLeft = "30%"
+textbox.appendChild(text)
+textbox.appendChild(text2)
+lifecycle_tab.appendChild(textbox)
+}

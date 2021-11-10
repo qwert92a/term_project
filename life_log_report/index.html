@@ -89,7 +89,7 @@
                   id="input_id"
                   type="text"
                   class="form-control bg-light border-0 small"
-                  placeholder="Search for ID"
+                  placeholder="사용자님의 ID를 입력해주세요!"
                   aria-label="Search"
                   aria-describedby="basic-addon2"
                 />
@@ -368,41 +368,15 @@
                       d-flex
                       flex-row
                       align-items-center
-                      justify-content-between
                     "
+
+                    id="lifecycle_tab"
                   >
-                    <h6 class="m-0 font-weight-bold text-primary">생활 패턴</h6>
-                    <div class="dropdown no-arrow">
-                      <a
-                        class="dropdown-toggle"
-                        href="#"
-                        role="button"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <i
-                          class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-                        ></i>
-                      </a>
-                      <div
-                        class="
-                          dropdown-menu dropdown-menu-right
-                          shadow
-                          animated--fade-in
-                        "
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <div class="dropdown-header">범주 선택:</div>
-                        <a class="dropdown-item" href="#">외출 횟수</a>
-                        <a class="dropdown-item" href="#">약 복용 횟수</a>
-                      </div>
-                    </div>
+                    <h6 class="m-0 font-weight-bold text-primary">생활 패턴: </h6>
                   </div>
                   <!-- Card Body -->
                   <div class="card-body">
-                    <div class="chart-area">
+                    <div class="chart-area" id="AreaChartBox">
                       <canvas id="myAreaChart"></canvas>
                     </div>
                   </div>
@@ -723,46 +697,30 @@
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="col-lg-6 mb-4">
+                  <div class="col-lg-6 mb-4">
                     <div class="card bg-warning text-white shadow">
-                      <div class="card-body">
-                        Warning
+                      <div class="card-body" id="sleep">
+                        수면 규칙성
                         <div class="text-white-50 small">#f6c23e</div>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-6 mb-4">
-                    <div class="card bg-danger text-white shadow">
-                      <div class="card-body">
-                        Danger
+                    <div class="card bg-light text-black shadow">
+                      <div class="card-body" id="exercise">
+                        일주일 평균 운동횟수
                         <div class="text-white-50 small">#e74a3b</div>
                       </div>
                     </div>
-                  </div> -->
-                  <!-- <div class="col-lg-6 mb-4">
+                  </div>
+                  <div class="col-lg-6 mb-4">
                     <div class="card bg-secondary text-white shadow">
-                      <div class="card-body">
-                        Secondary
+                      <div class="card-body" id="total">
+                        종합
                         <div class="text-white-50 small">#858796</div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-light text-black shadow">
-                      <div class="card-body">
-                        Light
-                        <div class="text-black-50 small">#f8f9fc</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-dark text-white shadow">
-                      <div class="card-body">
-                        Dark
-                        <div class="text-white-50 small">#5a5c69</div>
-                      </div>
-                    </div>
-                  </div> -->
                 </div>
               </div>
 
@@ -795,7 +753,27 @@
                     > -->
                   </div>
                 </div>
+                <div class="col-lg-6 mb-4">
+                  <!-- Illustrations -->
+
+
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                      건강 점수
+                    </h6>
+                  </div>
+                  <div class="card-body" id="health_report">
+                    <div class="text-center">
+                    </div>
+                  </br></br>
+                  </div>
+                </div>
               </div>
+              </div>
+
+
+
             </div>
           </div>
           <!-- /.container-fluid -->
@@ -937,6 +915,14 @@
     </script>
 
     <!-- json files -->
+    <script
+    type="text/javascript"
+    src="data/json/program_data2/ex_avg.json"
+    ></script>
+    <script
+    type="text/javascript"
+    src="data/json/program_data2/sleep_reg.json"
+    ></script>
     <script
       type="text/javascript"
       src="data/json/program_data2/lifecycle.json"
