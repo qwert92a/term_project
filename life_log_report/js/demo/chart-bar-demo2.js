@@ -47,7 +47,7 @@ var myBarChart = new Chart(ctx, {
     labels: labels_data,
     datasets: [
       {
-        label: '외출 횟수',
+        label: '일일 평균 횟수',
         backgroundColor: '#4e73df',
         hoverBackgroundColor: '#2e59d9',
         borderColor: '#4e73df',
@@ -87,7 +87,7 @@ var myBarChart = new Chart(ctx, {
             min: 0,
             // max: 15000,
             max: 2,
-            maxTicksLimit: 5,
+            maxTicksLimit: 3,
             padding: 10,
             // Include a dollar sign in the ticks
             callback: function (value, index, values) {
@@ -123,7 +123,7 @@ var myBarChart = new Chart(ctx, {
         label: function (tooltipItem, chart) {
           var datasetLabel =
             chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + '회';
+          return datasetLabel + ': ' + tooltipItem.yLabel + '회';
         },
       },
     },

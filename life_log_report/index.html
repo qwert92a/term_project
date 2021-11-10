@@ -673,7 +673,7 @@
 
                 <!-- Color System -->
                 <div class="row">
-                  <div class="col-lg-6 mb-4" id="TV_box">
+                  <div class="col-lg-6 mb-4" id="TV_box" style="display: flex;">
                     <div class="card bg-primary text-white shadow" id="TV_card">
                       <div class="card-body" id="TV">
                         Primary
@@ -699,7 +699,7 @@
                   </div>
                   <div class="col-lg-6 mb-4">
                     <div class="card bg-warning text-white shadow">
-                      <div class="card-body" id="sleep">
+                      <div class="card-body" id="sleep" style="display: flex;">
                         수면 규칙성
                         <div class="text-white-50 small">#f6c23e</div>
                       </div>
@@ -707,20 +707,13 @@
                   </div>
                   <div class="col-lg-6 mb-4">
                     <div class="card bg-light text-black shadow">
-                      <div class="card-body" id="exercise">
+                      <div class="card-body" id="exercise" style="display: flex;">
                         일주일 평균 운동횟수
                         <div class="text-white-50 small">#e74a3b</div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 mb-4">
-                    <div class="card bg-secondary text-white shadow">
-                      <div class="card-body" id="total">
-                        종합
-                        <div class="text-white-50 small">#858796</div>
-                      </div>
-                    </div>
-                  </div>
+
                 </div>
               </div>
 
@@ -764,9 +757,13 @@
                     </h6>
                   </div>
                   <div class="card-body" id="health_report">
-                    <div class="text-center">
+                    <div class="text-center" id="health_score">
                     </div>
-                  </br></br>
+                  </br>
+                  <p id="last_message">
+                    건강 점수는 수면 규칙성, 평균 운동 횟수로 계산해요. TV를 너무 자주 보시거나 간식 섭취 횟수가 지나치게
+                    많다면 감점을 받을 수 있으니 주의해주세요!
+                  </p>
                   </div>
                 </div>
               </div>
