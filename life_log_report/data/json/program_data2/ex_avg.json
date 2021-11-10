@@ -1,529 +1,173 @@
 ex_avg={
-    "490": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 2.8
+    "1001": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.7
     },
-    "574": {},
     "1002": {
         "WeekN": 3,
         "Weekly_Ex_count": 0.7
-    },
-    "30035": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 0
-    },
-    "30053": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 4.2
-    },
-    "512": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 2.1
-    },
-    "808": {},
-    "540": {},
-    "1036": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 3.5
-    },
-    "1050": {
-        "WeekN": 0
-    },
-    "495": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 41.3
-    },
-    "668": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 26.6
-    },
-    "341": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 1.4
-    },
-    "1061": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 3.5
-    },
-    "30056": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 10.5
-    },
-    "1033": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 17.5
-    },
-    "768": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 0
-    },
-    "811": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 0.7
-    },
-    "30067": {},
-    "30062": {},
-    "1055": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 0
     },
     "1003": {
         "WeekN": 2,
         "Weekly_Ex_count": 4.2
     },
-    "30052": {},
-    "644": {
+    "1004": {
         "WeekN": 2,
         "Weekly_Ex_count": 0.7
     },
-    "809": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.0
+    "1008": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 0
     },
-    "513": {
+    "1009": {
+        "WeekN": 0
+    },
+    "1011": {
+        "WeekN": 0
+    },
+    "1012": {
         "WeekN": 2,
         "Weekly_Ex_count": 0.7
     },
-    "658": {
-        "WeekN": 0
+    "1013": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 21.0
     },
-    "1037": {
-        "WeekN": 0
+    "1015": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.7
     },
-    "527": {
+    "1016": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 22.4
+    },
+    "1018": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 0
+    },
+    "1019": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 9.8
+    },
+    "1020": {
         "WeekN": 3,
         "Weekly_Ex_count": 0
     },
-    "1048": {
+    "1021": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 2.8
+    },
+    "1022": {
         "WeekN": 4,
+        "Weekly_Ex_count": 22.4
+    },
+    "1026": {
+        "WeekN": 2,
         "Weekly_Ex_count": 0
     },
-    "494": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 15.4
-    },
-    "570": {
+    "1027": {
         "WeekN": 4,
-        "Weekly_Ex_count": 5.6
+        "Weekly_Ex_count": 8.4
+    },
+    "1028": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 4.9
+    },
+    "1029": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 14.0
+    },
+    "1030": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 2.1
     },
     "1032": {
         "WeekN": 4,
         "Weekly_Ex_count": 27.3
     },
-    "544": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 2.8
+    "1033": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 17.5
     },
-    "488": {
+    "1034": {},
+    "1036": {
         "WeekN": 1,
+        "Weekly_Ex_count": 3.5
+    },
+    "1037": {
+        "WeekN": 0
+    },
+    "1039": {
+        "WeekN": 0
+    },
+    "1040": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 17.5
+    },
+    "1042": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 9.1
+    },
+    "1043": {
+        "WeekN": 4,
         "Weekly_Ex_count": 0
     },
-    "30066": {
-        "WeekN": 2,
+    "1045": {
+        "WeekN": 0
+    },
+    "1046": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 0.7
+    },
+    "1047": {
+        "WeekN": 0
+    },
+    "1048": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 0
+    },
+    "1050": {
+        "WeekN": 0
+    },
+    "1052": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 6.3
+    },
+    "1053": {
+        "WeekN": 3,
         "Weekly_Ex_count": 0
     },
     "1054": {
         "WeekN": 3,
         "Weekly_Ex_count": 0.0
     },
-    "30063": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 41.3
-    },
-    "538": {},
-    "492": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 16.1
-    },
-    "1028": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 4.9
-    },
-    "542": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 0.7
-    },
-    "1034": {},
-    "476": {
+    "1055": {
         "WeekN": 4,
         "Weekly_Ex_count": 0
     },
-    "1052": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 6.3
-    },
-    "797": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 4.2
-    },
-    "673": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 10.5
-    },
-    "30079": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 2.8
-    },
-    "642": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 16.1
-    },
-    "30048": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 22.4
-    },
-    "547": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 4.9
-    },
-    "509": {},
-    "813": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 0
-    },
-    "339": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 4.2
-    },
-    "1019": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 9.8
+    "1056": {
+        "WeekN": 0
     },
     "1057": {
         "WeekN": 3,
         "Weekly_Ex_count": 16.1
     },
-    "1001": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.7
-    },
-    "273": {
-        "WeekN": 0
-    },
-    "30050": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 9.8
-    },
-    "1029": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 14.0
-    },
-    "511": {
-        "WeekN": 3,
+    "1059": {
+        "WeekN": 2,
         "Weekly_Ex_count": 2.8
     },
-    "720": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 0.7
-    },
-    "477": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 9.8
-    },
-    "1053": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0
-    },
-    "796": {
+    "1061": {
         "WeekN": 2,
-        "Weekly_Ex_count": 0
-    },
-    "672": {
-        "WeekN": 4,
         "Weekly_Ex_count": 3.5
     },
-    "315": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 0
-    },
-    "276": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.7
-    },
-    "1004": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 0.7
-    },
-    "30078": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 13.3
-    },
-    "496": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 7.0
-    },
-    "342": {},
     "1062": {
         "WeekN": 0
-    },
-    "30055": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 9.1
-    },
-    "1030": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 2.1
-    },
-    "30049": {
-        "WeekN": 0
-    },
-    "812": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 10.5
-    },
-    "546": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 9.8
-    },
-    "30064": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 2.8
-    },
-    "520": {
-        "WeekN": 0
-    },
-    "30061": {},
-    "1056": {
-        "WeekN": 0
-    },
-    "1018": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 0
-    },
-    "807": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.7
-    },
-    "583": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 17.5
-    },
-    "1043": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 0
-    },
-    "662": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 4.2
-    },
-    "535": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 36.4
-    },
-    "30071": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 14.0
-    },
-    "1011": {
-        "WeekN": 0
-    },
-    "1039": {
-        "WeekN": 0
-    },
-    "30040": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 4.9
-    },
-    "656": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 0
-    },
-    "30059": {},
-    "1020": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0
-    },
-    "802": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 5.6
-    },
-    "518": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 0
-    },
-    "667": {},
-    "530": {},
-    "30074": {
-        "WeekN": 0
-    },
-    "1008": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 0
-    },
-    "1046": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 0.7
     },
     "228": {
         "WeekN": 4,
         "Weekly_Ex_count": 0.7
     },
-    "635": {},
-    "486": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 22.4
-    },
-    "653": {},
-    "504": {
-        "WeekN": 0
-    },
-    "30045": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 0
-    },
-    "552": {},
-    "806": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0
-    },
-    "582": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 19.6
-    },
     "230": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 3.5
-    },
-    "1042": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 9.1
-    },
-    "30070": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 2.1
-    },
-    "534": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 13.3
-    },
-    "705": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 19.6
-    },
-    "30041": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0
-    },
-    "30016": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 5.6
-    },
-    "1021": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 2.8
-    },
-    "30058": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 7.0
-    },
-    "519": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.0
-    },
-    "803": {
-        "WeekN": 1,
-        "Weekly_Ex_count": 0
-    },
-    "30075": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 2.1
-    },
-    "1047": {
-        "WeekN": 0
-    },
-    "1009": {
-        "WeekN": 0
-    },
-    "1015": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.7
-    },
-    "30069": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.7
-    },
-    "505": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 31.5
-    },
-    "30044": {
-        "WeekN": 0
-    },
-    "805": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 0.7
-    },
-    "732": {},
-    "1027": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 8.4
-    },
-    "581": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 4.2
-    },
-    "30038": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 7.7
-    },
-    "30073": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 7.7
-    },
-    "537": {},
-    "1013": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 21.0
-    },
-    "760": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 39.9
-    },
-    "479": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 40.6
-    },
-    "654": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 9.1
-    },
-    "1022": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 22.4
-    },
-    "800": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 8.4
-    },
-    "30076": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 5.6
-    },
-    "532": {
-        "WeekN": 0
-    },
-    "665": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 41.3
-    },
-    "1016": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 22.4
-    },
-    "30047": {},
-    "804": {},
-    "580": {
-        "WeekN": 0
-    },
-    "1026": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 0
-    },
-    "1040": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 17.5
-    },
-    "30039": {
         "WeekN": 3,
         "Weekly_Ex_count": 3.5
     },
@@ -531,58 +175,414 @@ ex_avg={
         "WeekN": 2,
         "Weekly_Ex_count": 0
     },
-    "536": {
+    "273": {
+        "WeekN": 0
+    },
+    "276": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.7
+    },
+    "30016": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 5.6
+    },
+    "30035": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 0
+    },
+    "30038": {
         "WeekN": 4,
-        "Weekly_Ex_count": 6.3
+        "Weekly_Ex_count": 7.7
+    },
+    "30039": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 3.5
+    },
+    "30040": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 4.9
+    },
+    "30041": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0
+    },
+    "30043": {},
+    "30044": {
+        "WeekN": 0
+    },
+    "30045": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 0
+    },
+    "30046": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 14.0
+    },
+    "30047": {},
+    "30048": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 22.4
+    },
+    "30049": {
+        "WeekN": 0
+    },
+    "30050": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 9.8
+    },
+    "30052": {},
+    "30053": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 4.2
+    },
+    "30055": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 9.1
+    },
+    "30056": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 10.5
+    },
+    "30058": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 7.0
+    },
+    "30059": {},
+    "30061": {},
+    "30062": {},
+    "30063": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 41.3
+    },
+    "30064": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 2.8
+    },
+    "30066": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 0
+    },
+    "30067": {},
+    "30069": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.7
+    },
+    "30070": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 2.1
+    },
+    "30071": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 14.0
     },
     "30072": {
         "WeekN": 2,
         "Weekly_Ex_count": 30.1
     },
-    "661": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 2.8
-    },
-    "799": {
+    "30073": {
         "WeekN": 2,
-        "Weekly_Ex_count": 2.8
+        "Weekly_Ex_count": 7.7
     },
-    "633": {},
-    "1012": {
-        "WeekN": 2,
-        "Weekly_Ex_count": 0.7
-    },
-    "30043": {},
-    "655": {
-        "WeekN": 3,
-        "Weekly_Ex_count": 4.2
-    },
-    "585": {
-        "WeekN": 4,
-        "Weekly_Ex_count": 29.4
-    },
-    "801": {
+    "30074": {
         "WeekN": 0
+    },
+    "30075": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 2.1
+    },
+    "30076": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 5.6
     },
     "30077": {
         "WeekN": 4,
         "Weekly_Ex_count": 7.0
     },
-    "664": {},
-    "1045": {
-        "WeekN": 0
+    "30078": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 13.3
     },
-    "1059": {
+    "30079": {
         "WeekN": 2,
         "Weekly_Ex_count": 2.8
     },
+    "315": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 0
+    },
+    "339": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 4.2
+    },
+    "341": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 1.4
+    },
+    "342": {},
+    "476": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 0
+    },
+    "477": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 9.8
+    },
+    "479": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 40.6
+    },
+    "486": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 22.4
+    },
+    "488": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 0
+    },
+    "490": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 2.8
+    },
+    "492": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 16.1
+    },
+    "494": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 15.4
+    },
+    "495": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 41.3
+    },
+    "496": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 7.0
+    },
+    "504": {
+        "WeekN": 0
+    },
+    "505": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 31.5
+    },
+    "509": {},
+    "511": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 2.8
+    },
+    "512": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 2.1
+    },
+    "513": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 0.7
+    },
+    "518": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 0
+    },
+    "519": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.0
+    },
+    "520": {
+        "WeekN": 0
+    },
+    "527": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0
+    },
+    "530": {},
+    "532": {
+        "WeekN": 0
+    },
+    "534": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 13.3
+    },
+    "535": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 36.4
+    },
+    "536": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 6.3
+    },
+    "537": {},
+    "538": {},
+    "540": {},
+    "542": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 0.7
+    },
+    "544": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 2.8
+    },
+    "546": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 9.8
+    },
+    "547": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 4.9
+    },
+    "552": {},
+    "570": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 5.6
+    },
+    "574": {},
+    "580": {
+        "WeekN": 0
+    },
+    "581": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 4.2
+    },
+    "582": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 19.6
+    },
+    "583": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 17.5
+    },
+    "585": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 29.4
+    },
+    "633": {},
+    "635": {},
     "636": {},
+    "642": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 16.1
+    },
+    "644": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 0.7
+    },
     "650": {
         "WeekN": 4,
         "Weekly_Ex_count": 42.7
     },
-    "30046": {
+    "653": {},
+    "654": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 9.1
+    },
+    "655": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 4.2
+    },
+    "656": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 0
+    },
+    "658": {
+        "WeekN": 0
+    },
+    "661": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 2.8
+    },
+    "662": {
         "WeekN": 4,
-        "Weekly_Ex_count": 14.0
+        "Weekly_Ex_count": 4.2
+    },
+    "664": {},
+    "665": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 41.3
+    },
+    "667": {},
+    "668": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 26.6
+    },
+    "672": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 3.5
+    },
+    "673": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 10.5
+    },
+    "705": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 19.6
+    },
+    "720": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 0.7
+    },
+    "732": {},
+    "760": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 39.9
+    },
+    "768": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 0
+    },
+    "796": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 0
+    },
+    "797": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 4.2
+    },
+    "799": {
+        "WeekN": 2,
+        "Weekly_Ex_count": 2.8
+    },
+    "800": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 8.4
+    },
+    "801": {
+        "WeekN": 0
+    },
+    "802": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 5.6
+    },
+    "803": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 0
+    },
+    "804": {},
+    "805": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.7
+    },
+    "806": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0
+    },
+    "807": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.7
+    },
+    "808": {},
+    "809": {
+        "WeekN": 3,
+        "Weekly_Ex_count": 0.0
+    },
+    "811": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 0.7
+    },
+    "812": {
+        "WeekN": 1,
+        "Weekly_Ex_count": 10.5
+    },
+    "813": {
+        "WeekN": 4,
+        "Weekly_Ex_count": 0
     }
 }

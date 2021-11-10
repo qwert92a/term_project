@@ -435,6 +435,29 @@ with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
 
 
+#  empty data
+
+data = {}
+
+for file in files:
+    user_id = file.split("_")[1]
+    user_data = GetDataById(user_id)
+
+    json_path = "../../json/program_data2/empty_data.json"
+    data[user_id] = {}
+
+    if (user_data.empty):
+        data[user_id] = {"empty": "true"}
+    else:
+        data[user_id] = {"empty": "false"}
+
+
+json_str = 'id_data=' + json.dumps(data, indent=4,ensure_ascii=False) 
+
+with open(json_path, 'w', encoding='UTF-8') as outfile:
+    outfile.write(json_str)
+
+
 #---------------------------------------------------------------
 
 
@@ -531,9 +554,11 @@ with open(json_path, 'w', encoding='UTF-8') as outfile:
     outfile.write(json_str)
 
 os.chdir('../../../../')
-print(os.getcwd())
+
+print('Data preprocessing done!')
 
 #---------------------------------------------------------------
 
 filename = 'file:///'+os.getcwd()+'/' + 'life_log_report/index.html'
 webbrowser.open_new_tab(filename)
+
